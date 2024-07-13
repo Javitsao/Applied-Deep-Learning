@@ -1,0 +1,53 @@
+cd /tmp2/b10902027/ADL/hw2/
+source /tmp2/b10902027/miniconda3/etc/profile.d/conda.sh
+conda activate adlhw1
+
+python run_summarization.py \
+  --model_name_or_path google/mt5-small \
+  --train_file data/train.json \
+  --text_column maintext\
+  --summary_column title\
+  --output_dir /tmp2/b10902027/ADL/hw2/model_v4 \
+  --per_device_train_batch_size 8 \
+  --num_train_epochs 5 \
+  --learning_rate 5e-4 \
+  --save_steps 1000 \
+  --logging_steps 100 \
+  --overwrite_output_dir \
+  --predict_with_generate \
+  --max_source_length 1024\
+  --max_target_length 128\
+  --do_train
+
+python run_summarization.py \
+  --model_name_or_path /tmp2/b10902027/ADL/hw2/model_v4 \
+  --train_file data/train.json \
+  --test_file data/public.json\
+  --text_column maintext\
+  --summary_column title\
+  --output_dir /tmp2/b10902027/ADL/hw2/model_v4 \
+  --per_device_train_batch_size 8 \
+  --num_train_epochs 0 \
+  --learning_rate 2e-4 \
+  --num_beams 4\
+  --predict_with_generate \
+  --max_source_length 1024\
+  --max_target_length 128\
+  --do_predict
+
+
+python summarization_trainer.py \
+  --model_name_or_path google/mt5-small \
+  --train_file data/train.json \
+  --validation_file data/public.json\
+  --text_column maintext\
+  --summary_column title\
+  --output_dir model_v5 \
+  --per_device_train_batch_size 8 \
+  --per_device_eval_batch_size 1 \
+  --gradient_accumulation_steps 1\
+  --num_train_epochs 1 \
+  --learning_rate 5e-4 \
+  --num_beams 4\
+  --max_source_length 1024\
+  --max_target_length 128
