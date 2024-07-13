@@ -1,4 +1,4 @@
-## prepare the file
+## prepare the file (download.sh)
 
 copy two data files context.json and test.json to the current path
 
