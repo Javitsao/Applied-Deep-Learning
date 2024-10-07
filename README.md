@@ -16,7 +16,7 @@
 
 ### HW3: Instruction Tuning (Classical Chinese)
 - **Description**: Fine-tuning(QLoRA) the LLaMa model for the bidirectional translation between vernacular Chinese and Classical Chinese.
-- **Model**: Traditional Mandarin support LLM based on LLaMa 2(https://ai.meta.com/llama/)
+- **Model**: Traditional Mandarin support LLM based on LLaMa 2. (https://ai.meta.com/llama/)
 
 
 ## Final Project
