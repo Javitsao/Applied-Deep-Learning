@@ -4,15 +4,15 @@
 
 ### HW1: Chinese Extractive Question Answering (QA)
 - **Description**: Implement a system to extract answers from Chinese text based on given questions.
- -- Paragraph Selection: Determine which paragraph is relevant.
- -- Span selection: Determine the start and end position of the answer span.
+    - Paragraph Selection: Determine which paragraph is relevant.
+    - Span Selection: Determine the start and end position of the answer span.
 
 
 ### HW2: Chinese News Summarization (Title Generation)
 - **Description**: Develop a model to generate titles for Chinese news articles.
 - **Data**: 
- -- Source: news articles scraped from udn.com
- -- Train: 21710 articles from 2015-03-02 to 2021-01-13
+    - Source: news articles scraped from udn.com
+    - Train: 21710 articles from 2015-03-02 to 2021-01-13
 
 ### HW3: Instruction Tuning (Classical Chinese)
 - **Description**: Fine-tuning(QLoRA) the LLaMa model for the bidirectional translation between vernacular Chinese and Classical Chinese.
