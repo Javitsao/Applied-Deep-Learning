@@ -23,7 +23,7 @@
 
 ### Fake News Detection
 - **Description**: Create a system to detect fake news in Chinese media.
-**Abstract:**
+- **Abstract:**
 The abundance of fake news in the digital age hinders reliable information flow. This research delves into Natural Language Processing (NLP) techniques for detecting fake news and discerning human-generated content. We explore the efficacy of models like `bert-base-uncased` and language-specific variants (e.g., `BERT-based-Japanese`) in differentiating between genuine and deceptive news articles. Through rigorous experimentation and evaluation, we unveil the strengths and limitations of diverse NLP approaches, shedding light on their performance across various linguistic landscapes. The findings contribute to the advancement of fake news detection systems, bolstering information integrity in the digital era.
 
 - **Introduction:**
